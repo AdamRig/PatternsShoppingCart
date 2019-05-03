@@ -117,5 +117,11 @@ public class CartInfo {
         }
  
     }
+    
+    public boolean pay(PaymentMethod method) {
+    	 
+        double totalCost = getAmountTotal();
+        return method.pay(totalCost);
+      }
  
 }
